@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramanarayanan G | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="cursor"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">RAM FOLIO</div>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link about-btn">About</a></li>
+      <li><a href="#skills" class="nav-link skills-btn">Skills</a></li>
+      <li><a href="#projects" class="nav-link projects-btn">Projects</a></li>
+      <li><a href="#certs" class="nav-link cert-btn">Certifications</a></li>
+      <li><a href="#contact" class="nav-link contact-btn">Contact</a></li>
+    </ul>
+
+    <a href="https://drive.google.com/file/d/1v3D0tYtvPy57XKZRf7ljTZd6p353f0kP/view?usp=sharing"
+      class="btn-primary tilt-element" target="_blank">RESUME</a>
+
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div id="particles-js"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="greeting">Hello, I'm</h2>
+        <h1 class="name">Ramanarayanan G</h1>
+        <p class="title">
+          Electronics & Communication Engineering | 2nd Year @ REC | UI/UX Designer
+        </p>
+
+        <div class="hero-btns">
+          <a class="btn-primary tilt-element" target="_blank"
+            href="https://www.linkedin.com/in/ramanarayanan-g-262a51317">
+            Let's Connect
+          </a>
+          <a class="btn-secondary tilt-element about-btn" href="#about">
+            About Me
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-image tilt-element">
+        <div class="img-placeholder">
+          <img src="assets/home.jpg" alt="My Profile" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ABOUT MODAL -->
+  <div id="about-modal" class="modal">
+    <div class="modal-ball"></div>
+
+    <div class="modal-content">
+      <span class="close-modal about-close">&times;</span>
+
+      <div class="modal-body">
+        <div class="modal-text">
+          <h2>About Me</h2>
+          <p>Hi! I'm <strong>Ramanarayanan</strong> — a 2nd-year Electronics and Communication Engineering student at REC, with a strong interest in web development and video editing.</p>
+          <p>I’m actively exploring my core domain, especially VLSI, embedded systems, and PCB design, and I’m always looking for opportunities to learn and build real-world projects.</p>
+        </div>
+
+        <div class="modal-image">
+          <img src="assets/about.png" alt="Profile" class="profile-img" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- SKILLS MODAL -->
+  <div id="skills-modal" class="modal">
+    <div class="modal-ball"></div>
+
+    <div class="modal-content">
+      <span class="close-modal close-skills">&times;</span>
+
+      <div class="modal-body skills-body">
+        <h2>My Skills</h2>
+
+        <div class="skills-scroll">
+
+          <div class="skill-bar-item" data-percent="70">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">70%</div>
+            </div>
+            <div class="skill-label">Python</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="60">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">60%</div>
+            </div>
+            <div class="skill-label">MySQL</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="75">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">75%</div>
+            </div>
+            <div class="skill-label">DB Connectors</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="0">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">0%</div>
+            </div>
+            <div class="skill-label">Embedded C</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="10">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">10%</div>
+            </div>
+            <div class="skill-label">PCB Design</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="0">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">0%</div>
+            </div>
+            <div class="skill-label">VLSI</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="80">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">80%</div>
+            </div>
+            <div class="skill-label">Video Editing</div>
+          </div>
+
+          <div class="skill-bar-item" data-percent="55">
+            <div class="hover-bar">
+              <div class="fill"></div>
+              <div class="percent-text">55%</div>
+            </div>
+            <div class="skill-label">Web Dev</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- PROJECTS MODAL -->
+  <div id="projects-modal" class="modal">
+    <div class="modal-ball"></div>
+
+    <div class="modal-content">
+      <span class="close-modal close-projects">&times;</span>
+
+      <div class="modal-body projects-body">
+        <h2>My Projects</h2>
+
+        <div class="projects-list">
+          <a href="https://github.com/Raman4rayanan/ramanarayanan.g-portfolio"
+            target="_blank" class="project-item">
+            <i class="fa-brands fa-github"></i> Portfolio Website
+          </a>
+
+          <a href="https://github.com/Raman4rayanan/my-portfolio"
+            target="_blank" class="project-item">
+            <i class="fa-brands fa-github"></i> Old Portfolio Website
+          </a>
+
+          <a href="https://github.com/Raman4rayanan/quantum-coders-backend"
+            target="_blank" class="project-item">
+            <i class="fa-brands fa-github"></i> Front End For Quantum Coders
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CERTIFICATES MODAL -->
+  <div id="cert-modal" class="modal">
+    <div class="modal-ball"></div>
+
+    <div class="modal-content">
+      <span class="close-modal close-cert">&times;</span>
+
+      <div class="modal-body certs-body">
+        <h2>My Certificates</h2>
+
+        <div class="cert-grid">
+          <!-- Certificate 1 -->
+          <div class="cert-card">
+            <div class="cert-image">
+              <img src="assets/ssn-certificate.jpg" alt="SSN Technical Event Certificate" />
+            </div>
+            <div class="cert-text">
+              <h3>RELAY TIONSHIP - SSN</h3>
+              <p>
+                Experienced an Tech-EVE in SSN, and ended up in earning First Place as a team.
+              </p>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="cert-card">
+            <div class="cert-image">
+              <img src="assets/IDEA-FACT-IOT.jpg" alt="3D Printing, IoT, and Drone Design at IDEA Lab" />
+            </div>
+            <div class="cert-text">
+              <h3>3D Printing, IoT and Drone Design at IDEA Lab</h3>
+              <p>
+                Completed A two-day hands-on training programme on 3D Printing, IoT, and Drone Design at IDEA Lab @REC
+              </p>
+            </div>
+          </div>
+
+          
+
+          <!-- Duplicate / edit cert-card blocks for more certificates -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-ball"></div>
+
+    <div class="modal-content">
+      <span class="close-modal close-contact">&times;</span>
+
+      <div class="modal-body contact-body">
+        <div class="contact-inner">
+
+          <!-- TOP: HERO TEXT -->
+          <div class="contact-header">
+            <p class="contact-kicker">LET'S START THE CONVERSATION</p>
+            <h2 class="contact-title-large">INVENT. BUILD. INNOVATE.</h2>
+            <p class="contact-sub-small">every project begins with</p>
+            <h2 class="contact-title-large">YOUR MESSAGE</h2>
+            <p class="contact-sub">
+              From circuits to clean UI – if it’s ECE, VLSI, PCB or web, I’d love to discuss it.
+            </p>
+          </div>
+
+          <!-- MIDDLE: FORM (scrolls inside modal) -->
+          <form id="contact-form" class="contact-form">
+            <div class="contact-field">
+              <label>YOUR NAME*</label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Type your name"
+                required
+              />
+            </div>
+
+            <div class="contact-field">
+              <label>YOUR EMAIL*</label>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="name@email.com"
+                required
+              />
+            </div>
+
+            <div class="contact-field">
+              <label>PHONE*</label>
+              <input
+                type="tel"
+                name="user_phone"
+                placeholder="+91 —"
+                required
+              />
+            </div>
+
+            <div class="contact-field">
+              <label>HOW CAN I HELP YOU?</label>
+              <textarea
+                rows="3"
+                name="message"
+                placeholder="Short and clear message works best."
+                required
+              ></textarea>
+            </div>
+
+            <div class="contact-budget-row">
+              <span class="budget-label">PROJECT BUDGET (INR)</span>
+              <div class="budget-pills">
+                <button type="button" class="budget-pill" data-budget="3K–5K">3K–5K</button>
+                <button type="button" class="budget-pill" data-budget="5K–10K">5K–10K</button>
+                <button type="button" class="budget-pill" data-budget="MORE">MORE</button>
+              </div>
+            </div>
+
+            <!-- Hidden field actually sent to EmailJS -->
+            <input type="hidden" name="project_budget" id="budget-input" />
+
+            <button type="submit" class="contact-cta">
+              DISCUSS THE PROJECT →
+            </button>
+          </form>
+
+          <!-- BOTTOM: LINKS + INFO -->
+          <div class="contact-bottom">
+            <!-- left: links -->
+            <div class="contact-left">
+              <ul class="contact-links-list">
+                <li class="contact-link-item">
+                  <a href="https://github.com/Raman4rayanan" target="_blank" rel="noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span>
+                  </a>
+                </li>
+
+                <li class="contact-link-item">
+                  <a href="https://www.linkedin.com/in/ramanarayanan-g-262a51317"
+                     target="_blank" rel="noreferrer">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+
+                <li class="contact-link-item">
+                  <a href="https://www.instagram.com/chxndru.exe/"
+                     target="_blank" rel="noreferrer">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span>
+                  </a>
+                </li>
+
+                <li class="contact-link-item">
+                  <button type="button" id="copy-email-btn"
+                          data-email="ramanarayanan.gs@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Copy Email</span>
+                  </button>
+                  <span class="copy-success" id="copy-success">Copied!</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- right: extra info -->
+            <div class="contact-right">
+              <div class="contact-label">Personal Mail ID</div>
+              <div class="contact-email">ramanarayanan.gs@gmail.com</div>
+
+              <div class="contact-label" style="margin-top: 1rem;">Phone No</div>
+              <div class="contact-phone">+91-95000 90288</div>
+
+              <p class="contact-note">
+                Send a short, clear message with context — projects, internships or collabs.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+
+  <!-- EmailJS library -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Your main JS -->
+  <script src="script.js"></script>
+</body>
+
+</html>
