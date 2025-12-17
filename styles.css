@@ -334,7 +334,7 @@ section {
 }
 
 .skills-grid-modal .skill-card:hover {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
 }
 
@@ -556,13 +556,16 @@ footer {
 
 .close-modal {
     position: absolute;
-    top: 20px;
-    right: 30px;
+    top: 25px;
+    right: 25px;
+    /* Moved in slightly to be safe */
     font-size: 2rem;
     font-weight: bold;
     color: #333;
     cursor: pointer;
     transition: color 0.3s ease;
+    z-index: 2600;
+    /* Ensure it's above everything */
 }
 
 .close-modal:hover {
@@ -641,7 +644,7 @@ footer {
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2),
-                0 0 35px rgba(0, 242, 255, 0.35);
+        0 0 35px rgba(0, 242, 255, 0.35);
 }
 
 .project-item i {
@@ -665,7 +668,7 @@ footer {
 
 .project-item:hover::before {
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 
+    box-shadow:
         0 0 0 1px rgba(0, 242, 255, 0.8),
         0 0 45px rgba(0, 242, 255, 0.6);
 }
@@ -724,9 +727,9 @@ footer {
     gap: 1rem;
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s var(--transition),
-                box-shadow 0.25s var(--transition),
-                border-color 0.25s var(--transition),
-                background 0.25s var(--transition);
+        box-shadow 0.25s var(--transition),
+        border-color 0.25s var(--transition),
+        background 0.25s var(--transition);
     cursor: default;
 }
 
@@ -1058,11 +1061,13 @@ footer {
 /* THIS ONE CONTROLS THE TEXT CONTAINER POSITION */
 .modal-content {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;          /* 🔥 was 80% */
-    max-width: 1200px;   /* 🔥 was 900px */
+    width: 90%;
+    /* 🔥 was 80% */
+    max-width: 1200px;
+    /* 🔥 was 900px */
     height: auto;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -1103,8 +1108,10 @@ footer {
     100% {
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 90%;            /* keeps the same percentage */
-        max-width: 1200px;     /* 🔥 was 900px – wider on big screens */
+        width: 90%;
+        /* keeps the same percentage */
+        max-width: 1200px;
+        /* 🔥 was 900px – wider on big screens */
         height: 60vh;
         border-radius: 20px;
         opacity: 1;
@@ -1123,29 +1130,15 @@ footer {
     background: transparent !important;
     box-shadow: none !important;
     transition: none !important;
-    transform: none !important;
+    transform: translate(-50%, -50%) !important;
+    /* Keep it centered! */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+
+    /* NAVIGATION */
     .navbar {
-        padding: 1rem 5%;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        height: 100vh;
-        width: 70%;
-        background: rgba(5, 5, 5, 0.95);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: var(--transition);
-    }
-
-    .nav-links.active {
-        right: 0;
+        padding: 1.5rem 2rem;
     }
 
     .hamburger {
@@ -1153,16 +1146,50 @@ footer {
         z-index: 1001;
     }
 
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
     }
 
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 2rem;
+        flex-direction: column;
+        background: rgba(5, 5, 5, 0.95);
+        backdrop-filter: blur(15px);
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border-right: 1px solid var(--glass-border);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 8rem;
+        padding-bottom: 5rem;
     }
 
     .hero-content {
@@ -1171,38 +1198,210 @@ footer {
         gap: 3rem;
     }
 
+    .hero-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        font-size: 2.8rem;
+        line-height: 1.2;
+    }
+
+    .title {
+        font-size: 1rem;
+        margin: 0 auto 2rem;
+    }
+
     .hero-btns {
         justify-content: center;
     }
 
+    .img-placeholder {
+        width: 280px;
+        height: 280px;
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* GLOBAL */
+    section {
+        padding: 4rem 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    /* HERO */
     .name {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        gap: 1rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
     }
 
     .img-placeholder {
-        width: 250px;
-        height: 250px;
+        width: 240px;
+        height: 240px;
         font-size: 5rem;
+    }
+
+    /* MODALS */
+    .modal-content {
+        padding: 2rem 1.5rem;
+        width: 90%;
+        margin: 5% auto;
+        height: auto;
+        max-height: 85vh;
+        overflow-y: auto;
     }
 
     .modal-body {
         flex-direction: column-reverse;
-        text-align: center;
+        gap: 2rem;
     }
 
-    .modal-text h2 {
-        text-align: center !important;
+    #about-modal .modal-body {
+        flex-direction: column;
     }
 
     .profile-img {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
+    }
+
+    /* SKILLS */
+    .skills-scroll {
+        padding: 1rem 0;
+        gap: 1.5rem;
+    }
+
+    .hover-bar {
+        height: 150px;
+        width: 40px;
+    }
+
+    /* CONTACT */
+    #contact-modal .modal-content {
+        height: 90vh !important;
+        flex-direction: column;
+    }
+
+    .contact-body {
+        padding: 1rem;
+    }
+
+    .contact-title-large {
+        font-size: 1.8rem;
+    }
+
+    .budget-pills {
+        justify-content: center;
     }
 }
 
+/* TOUCH DEVICES - REMOVE CURSOR */
+@media (hover: none) and (pointer: coarse) {
+    .cursor {
+        display: none !important;
+    }
 
+    .project-item:active,
+    .cert-card:active,
+    .btn-primary:active,
+    .btn-secondary:active,
+    .skill-card:active {
+        transform: scale(0.98);
+    }
+}
+
+/* Ensure modal is responsive generally */
 .modal.active .modal-content {
-    width: 50% !important;      /* change this to whatever you want */
-    max-width: 1200px !important; /* increase modal size */
-    margin: 0 auto !important;  
+    width: 90% !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* =========================================
+   CRITICAL MOBILE FIXES
+   (Overrides previous rules to ensure fit)
+   ========================================= */
+@media (max-width: 600px) {
+
+    /* Force Modal to be auto height so it grows with content */
+    /* Force Modal to be auto height so it grows with content */
+    .modal.active .modal-content {
+        height: auto !important;
+        max-height: 85vh !important;
+        /* Leave room for bars */
+        display: flex !important;
+        flex-direction: column !important;
+        top: 50% !important;
+        left: 50% !important;
+        /* Fix horizontal centering */
+        transform: translate(-50%, -50%) !important;
+        animation: none !important;
+        /* Disable height-constraining animation */
+        opacity: 1 !important;
+        /* Ensure visible */
+
+        /* RESTORE BACKGROUND */
+        background: #ffffff !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+
+        /* SCROLL FIX: Don't scroll the whole box, just the body */
+        overflow: hidden !important;
+    }
+
+    /* Modal Body Layout */
+    .modal-body {
+        /* Default to normal column (Text/Title Top, Content Bottom) */
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 1.5rem !important;
+        height: auto !important;
+        display: flex !important;
+
+        /* SCROLL FIX: Scroll content inside here */
+        overflow-y: auto !important;
+        max-height: calc(85vh - 40px) !important;
+        /* Subtract padding/close btn space */
+        padding-top: 10px;
+        /* Space for close button if overlapping */
+    }
+
+    /* Ensure About Modal puts Text bottom, Image top (visually) -> column-reverse matches this if Image is 2nd in DOM */
+    #about-modal .modal-body {
+        flex-direction: column-reverse !important;
+    }
+
+    /* Resize Profile Image */
+    .profile-img {
+        width: 120px !important;
+        height: 120px !important;
+        margin: 0 auto !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Reset animations that might hide content */
+    .modal-ball {
+        display: none !important;
+        /* Hide ball on mobile to simplify */
+    }
 }
